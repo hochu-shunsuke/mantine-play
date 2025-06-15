@@ -24,4 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 56px; /* ヘッダーの高さ分のパディング */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* メインコンテンツエリアを拡張してフッターを下に押し下げる */
+#main-content {
+  flex: 1;
 }

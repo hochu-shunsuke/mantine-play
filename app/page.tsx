@@ -27,7 +27,6 @@ export default function Home() {
           Welcome to <span className="text-blue-500">Next.js</span> with <span className="text-blue-500">Mantine</span>
         </h1>
       </main>
-      <ActionToggle />
     </div>
   );
 }

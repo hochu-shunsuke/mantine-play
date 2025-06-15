@@ -38,7 +38,9 @@ export default function RootLayout({
       >
         <MantineProvider>
           <HeaderMenu />
-          {children}
+          <main id="main-content">
+            {children}
+          </main>
           <FooterLinks />
         </MantineProvider>
       </body>

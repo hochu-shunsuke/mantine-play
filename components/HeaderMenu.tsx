@@ -4,10 +4,12 @@ import { IconChevronDown } from '@tabler/icons-react';
 import { Burger, Center, Container, Group, Menu } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
+import Link from 'next/link';
 import classes from './HeaderMenu.module.css';
+import { ActionToggle } from './ActionToggle';
 
 const links = [
-  { link: '/about', label: 'Features' },
+  { link: '/mantine', label: '自作ページ' },
   {
     link: '#1',
     label: 'Learn',
@@ -60,14 +62,13 @@ export function HeaderMenu() {
     }
 
     return (
-      <a
+      <Link
         key={link.label}
         href={link.link}
         className={classes.link}
-        onClick={(event) => event.preventDefault()}
       >
         {link.label}
-      </a>
+      </Link>
     );
   });
 
@@ -75,11 +76,14 @@ export function HeaderMenu() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <MantineLogo size={28} />
+          <Link href="/">
+            <MantineLogo size={28} />
+          </Link>
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>
           <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          <ActionToggle />
         </div>
       </Container>
     </header>
