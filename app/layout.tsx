@@ -5,7 +5,7 @@ import "./globals.css";
 import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
 
-import { HeaderSimple } from "@/components/HeaderSimple";
+import { HeaderMenu } from "@/components/HeaderMenu";
 import { FooterLinks } from "@/components/FooterLinks";
 
 const geistSans = Geist({
@@ -37,7 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <MantineProvider>
-          <HeaderSimple />
+          <HeaderMenu />
           {children}
           <FooterLinks />
         </MantineProvider>
