@@ -9,7 +9,7 @@ import classes from './HeaderMenu.module.css';
 import { ActionToggle } from './ActionToggle';
 
 const links = [
-  { link: '/mantine', label: '自作ページ' },
+  { link: '/mantine', label: '作成中' },
   {
     link: '#1',
     label: 'Learn',

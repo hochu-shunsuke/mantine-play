@@ -14,19 +14,73 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          src={mounted && computedColorScheme === 'dark' ? "/next-dark.svg" : "/next-light.svg"}
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <h1 className="text-4xl font-bold tracking-tight">
-          Welcome to <span className="text-blue-500">Next.js</span> with <span className="text-blue-500">Mantine</span>
-        </h1>
-      </main>
+    <div className="min-h-screen p-8 sm:p-12 lg:p-16">
+      <div className="max-w-6xl mx-auto">
+        {/* ヘッダーセクション - 画面中央に配置 */}
+        <div className="flex items-center justify-center" style={{ height: 'calc(100vh - 112px)', marginTop: '-28px' }}>
+          <header className="text-center">
+            <div className="mb-12">
+              <Image
+                src={mounted && computedColorScheme === 'dark' ? "/next-dark.svg" : "/next-light.svg"}
+                alt="Next.js logo"
+                width={240}
+                height={50}
+                priority
+                className="mx-auto"
+              />
+            </div>
+            <h1 className="text-5xl font-bold tracking-tight mb-8">
+              Welcome to <span className="text-blue-500">Next.js</span> with <span className="text-blue-500">Mantine</span>
+            </h1>
+          </header>
+        </div>
+
+        {/* コンポーネントセクション */}
+        <div className="space-y-32">
+          {/* テーマ切り替えセクション */}
+          <section className="py-20">
+            <h2 className="text-3xl font-semibold mb-16 text-center">Theme Toggle</h2>
+            <div className="flex justify-center">
+              <ActionToggle />
+            </div>
+          </section>
+
+          {/* テーマ切り替えセクション */}
+          <section className="py-20">
+            <h2 className="text-3xl font-semibold mb-16 text-center">Theme Toggle</h2>
+            <div className="flex justify-center">
+              <ActionToggle />
+            </div>
+          </section>
+
+          {/* テーマ切り替えセクション */}
+          <section className="py-20">
+            <h2 className="text-3xl font-semibold mb-16 text-center">Theme Toggle</h2>
+            <div className="flex justify-center">
+              <ActionToggle />
+            </div>
+          </section>
+
+          {/* 今後のコンポーネント用のセクション例 */}
+          {/* 
+          <section className="py-20">
+            <h2 className="text-3xl font-semibold mb-16 text-center">Button Examples</h2>
+            <div className="flex justify-center gap-6">
+              <Button size="lg" variant="filled">Primary Button</Button>
+              <Button size="lg" variant="outline">Outline Button</Button>
+            </div>
+          </section>
+
+          <section className="py-20">
+            <h2 className="text-3xl font-semibold mb-16 text-center">Form Components</h2>
+            <div className="max-w-lg mx-auto space-y-6">
+              <TextInput size="lg" label="Your Name" placeholder="Enter your name" />
+              <Select size="lg" label="Country" data={countries} />
+            </div>
+          </section>
+          */}
+        </div>
+      </div>
     </div>
   );
 }
