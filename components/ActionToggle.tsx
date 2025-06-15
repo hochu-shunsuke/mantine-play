@@ -1,3 +1,5 @@
+"use client";
+
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import cx from 'clsx';
 import { ActionIcon, Group, useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
