@@ -19,7 +19,6 @@ export function ImageCheckbox({
   onChange,
   title,
   description,
-  className,
   color,
   ...others
 }: ImageCheckboxProps & Omit<React.ComponentPropsWithoutRef<'button'>, keyof ImageCheckboxProps>) {
