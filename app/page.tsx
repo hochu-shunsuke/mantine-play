@@ -1,9 +1,14 @@
 'use client';
 
 import Image from "next/image";
-import { ActionToggle } from "@/components/ActionToggle";
 import { useComputedColorScheme } from '@mantine/core';
 import { useEffect, useState } from 'react';
+
+import { ActionToggle } from "@/components/ActionToggle";
+import { AutocompleteLoading } from "@/components/AutocompleteLoading";
+import { CheckboxCard } from "@/components/CheckboxCard";
+import { ContainedInputs } from "@/components/ContainedInputs";
+import { CurrencyInput } from "@/components/CurrencyInput";
 
 export default function Home() {
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
@@ -37,27 +42,43 @@ export default function Home() {
 
         {/* コンポーネントセクション */}
         <div className="space-y-32">
-          {/* テーマ切り替えセクション */}
+          {/* Color scheme toggle */}
           <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Theme Toggle</h2>
-            <div className="flex justify-center">
+            <h2 className="text-3xl font-semibold mb-16 text-center">Color scheme toggle</h2>
+            <div className="max-w-2xl mx-auto">
               <ActionToggle />
             </div>
           </section>
 
-          {/* テーマ切り替えセクション */}
+          {/* Autocomplete async data */}
           <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Theme Toggle</h2>
-            <div className="flex justify-center">
-              <ActionToggle />
+            <h2 className="text-3xl font-semibold mb-16 text-center">Autocomplete async data</h2>
+            <div className="max-w-2xl mx-auto">
+              <AutocompleteLoading />
             </div>
           </section>
 
-          {/* テーマ切り替えセクション */}
+          {/* Card with checkbox */}
           <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Theme Toggle</h2>
-            <div className="flex justify-center">
-              <ActionToggle />
+            <h2 className="text-3xl font-semibold mb-16 text-center">Card with checkbox</h2>
+            <div className="max-w-2xl mx-auto">
+              <CheckboxCard />
+            </div>
+          </section>
+
+          {/* Inputs with label inside input */}
+          <section className="py-20">
+            <h2 className="text-3xl font-semibold mb-16 text-center">Inputs with label inside input</h2>
+            <div className="max-w-2xl mx-auto">
+              <ContainedInputs />
+            </div>
+          </section>
+
+          {/* Number input with currency select */}
+          <section className="py-20">
+            <h2 className="text-3xl font-semibold mb-16 text-center">Number input with currency select</h2>
+            <div className="max-w-2xl mx-auto">
+              <CurrencyInput />
             </div>
           </section>
 
