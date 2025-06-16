@@ -17,6 +17,14 @@ import { GradientSegmentedControl } from "@/components/GradientSegmentedControl"
 import { ImageCheckboxes } from "@/components/ImageCheckboxes";
 import { InputWithButton } from "@/components/InputWithButton";
 import { LanguagePicker } from "@/components/LanguagePicker";
+import { PasswordStrength } from "@/components/PasswordStrength";
+import { ButtonCopy } from "@/components/ButtonCopy";
+import { ButtonMenu } from "@/components/ButtonMenu";
+import { SplitButton } from "@/components/SplitButton";
+import { SliderHover } from "@/components/SliderHover";
+import { ButtonProgress } from "@/components/ButtonProgress";
+import { SliderIcon } from "@/components/SliderIcon";
+import { ArticlesCardsGrid } from "@/components/ArticlesCardsGrid";
 
 export default function Home() {
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
@@ -74,7 +82,7 @@ export default function Home() {
             <CustomSwitch />
           </ComponentSection>
 
-          <ComponentSection title="Input with floating label" layoutType="form">
+          <ComponentSection title="Input with floating label" layoutType="center">
             <FloatingLabelInput />
           </ComponentSection>
 
@@ -97,7 +105,38 @@ export default function Home() {
           <ComponentSection title="Language picker" layoutType="center">
             <LanguagePicker />
           </ComponentSection>
+
+          <ComponentSection title="Password with strength meter" layoutType="form">
+            <PasswordStrength />
+          </ComponentSection>
           
+          <ComponentSection title="Copy to clipboard button" layoutType="center">
+            <ButtonCopy />
+          </ComponentSection>
+
+          <ComponentSection title="Button with menu" layoutType="center">
+            <ButtonMenu />
+          </ComponentSection>
+
+          <ComponentSection title="Button with loading progress" layoutType="form">
+            <ButtonProgress />
+          </ComponentSection>
+
+          <ComponentSection title="Split button" layoutType="center">
+            <SplitButton />
+          </ComponentSection>
+
+          <ComponentSection title="Slider with thumb visible on hover" layoutType="form">
+            <SliderHover />
+          </ComponentSection>
+
+          <ComponentSection title="Slider with icon thumb" layoutType="form">
+            <SliderIcon />
+          </ComponentSection>
+
+          <ComponentSection title="Articles cards grid" layoutType="wide">
+            <ArticlesCardsGrid />
+          </ComponentSection>
         </div>
       </div>
     </div>
