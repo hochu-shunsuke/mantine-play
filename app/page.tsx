@@ -4,11 +4,17 @@ import Image from "next/image";
 import { useComputedColorScheme } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
+import { ComponentSection } from "@/components/ComponentSection";
 import { ActionToggle } from "@/components/ActionToggle";
 import { AutocompleteLoading } from "@/components/AutocompleteLoading";
 import { CheckboxCard } from "@/components/CheckboxCard";
 import { ContainedInputs } from "@/components/ContainedInputs";
 import { CurrencyInput } from "@/components/CurrencyInput";
+import { CustomSwitch } from "@/components/CustomSwitch";
+import { FloatingLabelInput } from "@/components/FloatingLabelInput";
+import { ForgotPasswordInput } from "@/components/ForgotPasswordInput";
+import { GradientSegmentedControl } from "@/components/GradientSegmentedControl";
+import { ImageCheckboxes } from "@/components/ImageCheckboxes";
 
 export default function Home() {
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
@@ -42,45 +48,45 @@ export default function Home() {
 
         {/* コンポーネントセクション */}
         <div className="space-y-32">
-          {/* Color scheme toggle */}
-          <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Color scheme toggle</h2>
-            <div className="max-w-2xl mx-auto">
-              <ActionToggle />
-            </div>
-          </section>
+          <ComponentSection title="Color scheme toggle" layoutType="center">
+            <ActionToggle />
+          </ComponentSection>
 
-          {/* Autocomplete async data */}
-          <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Autocomplete async data</h2>
-            <div className="max-w-2xl mx-auto">
-              <AutocompleteLoading />
-            </div>
-          </section>
+          <ComponentSection title="Autocomplete async data" layoutType="form">
+            <AutocompleteLoading />
+          </ComponentSection>
 
-          {/* Card with checkbox */}
-          <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Card with checkbox</h2>
-            <div className="max-w-2xl mx-auto">
-              <CheckboxCard />
-            </div>
-          </section>
+          <ComponentSection title="Card with checkbox" layoutType="center">
+            <CheckboxCard />
+          </ComponentSection>
 
-          {/* Inputs with label inside input */}
-          <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Inputs with label inside input</h2>
-            <div className="max-w-2xl mx-auto">
-              <ContainedInputs />
-            </div>
-          </section>
+          <ComponentSection title="Inputs with label inside input" layoutType="form">
+            <ContainedInputs />
+          </ComponentSection>
 
-          {/* Number input with currency select */}
-          <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Number input with currency select</h2>
-            <div className="max-w-2xl mx-auto">
-              <CurrencyInput />
-            </div>
-          </section>
+          <ComponentSection title="Number input with currency select" layoutType="form">
+            <CurrencyInput />
+          </ComponentSection>
+
+          <ComponentSection title="Custom switch" layoutType="center">
+            <CustomSwitch />
+          </ComponentSection>
+
+          <ComponentSection title="Input with floating label" layoutType="form">
+            <FloatingLabelInput />
+          </ComponentSection>
+
+          <ComponentSection title="Forgot password on input label" layoutType="form">
+            <ForgotPasswordInput />
+          </ComponentSection>
+
+          <ComponentSection title="Gradient segmented control" layoutType="center">
+            <GradientSegmentedControl />
+          </ComponentSection>
+
+          <ComponentSection title="Checkbox with image" layoutType="wide">
+            <ImageCheckboxes />
+          </ComponentSection>
           
         </div>
       </div>
