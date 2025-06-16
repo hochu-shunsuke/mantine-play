@@ -15,6 +15,8 @@ import { FloatingLabelInput } from "@/components/FloatingLabelInput";
 import { ForgotPasswordInput } from "@/components/ForgotPasswordInput";
 import { GradientSegmentedControl } from "@/components/GradientSegmentedControl";
 import { ImageCheckboxes } from "@/components/ImageCheckboxes";
+import { InputWithButton } from "@/components/InputWithButton";
+import { LanguagePicker } from "@/components/LanguagePicker";
 
 export default function Home() {
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
@@ -86,6 +88,14 @@ export default function Home() {
 
           <ComponentSection title="Checkbox with image" layoutType="wide">
             <ImageCheckboxes />
+          </ComponentSection>
+
+          <ComponentSection title="Checkbox with image" layoutType="wide">
+            <InputWithButton />
+          </ComponentSection>
+
+          <ComponentSection title="Language picker" layoutType="center">
+            <LanguagePicker />
           </ComponentSection>
           
         </div>
