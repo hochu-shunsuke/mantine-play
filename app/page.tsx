@@ -81,25 +81,7 @@ export default function Home() {
               <CurrencyInput />
             </div>
           </section>
-
-          {/* 今後のコンポーネント用のセクション例 */}
-          {/* 
-          <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Button Examples</h2>
-            <div className="flex justify-center gap-6">
-              <Button size="lg" variant="filled">Primary Button</Button>
-              <Button size="lg" variant="outline">Outline Button</Button>
-            </div>
-          </section>
-
-          <section className="py-20">
-            <h2 className="text-3xl font-semibold mb-16 text-center">Form Components</h2>
-            <div className="max-w-lg mx-auto space-y-6">
-              <TextInput size="lg" label="Your Name" placeholder="Enter your name" />
-              <Select size="lg" label="Country" data={countries} />
-            </div>
-          </section>
-          */}
+          
         </div>
       </div>
     </div>
